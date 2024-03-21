@@ -63,6 +63,7 @@ Examples of column names found in provider datasets:
       * Using a special character first would also keep all provider columns together outside of the core FOCUS columns when columns are sorted alphabetically.
       * Some programming languages use an underscore (`_`) as a convention to indicate that a property is private. While these values are not "private", it might be a good way to indicate that these columns are not part of the core FOCUS columns.
     * BEST: **x_**.
+    * Column IDs SHOULD NOT exceed 59 characters because few commercial and opensource Databases as well as a few analytical services, few of them still have a column name length constraint. Few examples ,Mysql : 64 characters,MSSQL :128 characters,PostgreSQL :59 characters. Mongodb/ CosmoDB/ Athena/ DynamoDB/ DocumentDB/Redshift/BigQuery all seem to have a limit greater than Postgresql if there exists a limit.
 
 Examples:
 
